@@ -1,3 +1,22 @@
 body{
   font-family: arial;
+  font-size: 12px;
+  margin:0;
 }
+.menuCont, .mainCont{
+  padding-left: 1em
+}
+.nav{
+  background-color: #333;
+  color: #eee;
+}
+.current{
+  background-color: #111;
+  color: #eee;
+}
+
+.menuTitle{
+  font-size: 1.2em;
+}
+
+a{color:#f00;}
