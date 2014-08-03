@@ -46,3 +46,8 @@ TypeError: Cannot set property 'mode' of undefined
     at SerialPort.EventEmitter.emit (events.js:98:17)
     at SerialPortFactory.SerialPort.write (/Users/jloi/code/serialTest/nw/node_modules/johnny-five/node_modules/serialport/serialport.js:216:14)
 ```
+
+## TODO 
+
+- finish serial port testing (open client and sent bytes/report)
+-implement proper test
