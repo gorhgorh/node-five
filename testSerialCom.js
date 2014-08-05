@@ -1,40 +1,29 @@
-var serialPort = require("serialport"),
+var SerialPort = require("serialport"),
     utils = require("./libs/utils"),
     serialList = [],
     serCont = document.getElementById("serialCont"),
-    optListPre="<select>",
-    optListPost="</select>",
+    btSub = document.getElementById("btSub"),
     app = {},
     testor;
 
 // populate a list with serial connections
-serialPort.list(function (err, ports) {
+SerialPort.list(function (err, ports) {
   ports.forEach(function(port) {
     serialList.push(port.comName);
   });
-  serCont.innerHTML = utils.makeSerialOpt(serialList,optListPre,optListPost);
+  serCont.innerHTML = utils.makeSerialOpt(serialList);
 });
 
+// listen to the go button click
+btSub.addEventListener('click', function() { getVal(); }, false);
+
+// get the serialport selected value
+function getVal() {
+  var e = document.getElementById("serialCont");
+  var strUser = e.options[e.selectedIndex].value;
+  return strUser;
+}
 
 
 
 
-
-
-// var SerialPort = require("serialport").SerialPort
-// var serialPort = new SerialPort("/dev/cu.usbmodem1411", {
-//   baudrate: 9600
-// });
-
-
-
-// serialPort.on("open", function () {
-//   console.log('open');
-//   serialPort.on('data', function(data) {
-//     console.log('data received: ' + data);
-//   });
-//   serialPort.write("ls\n", function(err, results) {
-//     console.log('err ' + err);
-//     console.log('results ' + results);
-//   });
-// });

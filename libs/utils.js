@@ -10,11 +10,11 @@ function displaySerialList (arr) {
     return optList;
 }
 // display the possible serial port in an option list
-function makeSerialOpt(arr,optListPre,optListPost) {
+function makeSerialOpt(arr) {
   var optList="";
   arr.forEach(function (port) {
     optList = optList + '<option value="' + port + '">'+port+'</option>';
   });
-    var optString = optListPre + optList + optListPost;
-    return optString;
+
+    return optList;
 }

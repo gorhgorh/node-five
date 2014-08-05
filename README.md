@@ -1,3 +1,5 @@
+[![Gitter chat](https://badges.gitter.im/gorhgorh/node-five.png)](https://gitter.im/gorhgorh/node-five)
+
 # test runner to debug J5 with nodewebkit
 
 ## requirements
